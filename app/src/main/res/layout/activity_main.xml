@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/value_to_convert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Value to convert(lenght)"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/from_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/value_to_convert"
+        />
+
+    <RadioGroup
+        android:id="@+id/from_lenght_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/from_question"
+        app:layout_constraintStart_toStartOf="parent"
+        android:checkedButton="@id/option_meter">
+
+        <RadioButton
+            android:id="@+id/option_meter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[m]"/>
+        <RadioButton
+            android:id="@+id/option_kilometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[km]"/>
+        <RadioButton
+            android:id="@+id/option_centimeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[cm]"/>
+        <RadioButton
+            android:id="@+id/option_millimeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[mm]"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@id/to_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/value_to_convert"
+        android:paddingEnd="150dp"/>
+
+    <RadioGroup
+        android:id="@+id/to_lenght_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/to_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:checkedButton="@id/result_option_meter"
+        android:paddingEnd="105dp">
+
+        <RadioButton
+            android:id="@+id/result_option_meter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[m]"/>
+        <RadioButton
+            android:id="@+id/result_option_kilometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[km]"/>
+        <RadioButton
+            android:id="@+id/result_option_centimeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[cm]"/>
+        <RadioButton
+            android:id="@+id/result_option_millimeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[mm]"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calulate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/result_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Result value"
+        app:layout_constraintBottom_toTopOf="@+id/calculate_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
