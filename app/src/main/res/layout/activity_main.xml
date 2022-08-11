@@ -16,6 +16,7 @@
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="30dp"
         />
 
     <TextView
@@ -28,7 +29,7 @@
         />
 
     <RadioGroup
-        android:id="@+id/from_lenght_option"
+        android:id="@+id/from_length_option"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -68,7 +69,7 @@
         android:paddingEnd="150dp"/>
 
     <RadioGroup
-        android:id="@+id/to_lenght_option"
+        android:id="@+id/to_length_option"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -116,6 +117,7 @@
         tools:text="Result value"
         app:layout_constraintBottom_toTopOf="@+id/calculate_button"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
         />
 
 
